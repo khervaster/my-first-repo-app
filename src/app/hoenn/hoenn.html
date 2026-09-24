@@ -1,0 +1,6 @@
+ <h2>Hoenn Region Gym Leaders</h2>
+ <div class="card-grid">
+    @for (trainer of trainerService.trainers(); track trainer.name) {
+        <app-gym-card [leader]="trainer" />
+    }
+ </div>

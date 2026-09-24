@@ -1,0 +1,6 @@
+<h2>Kanto Region Gym Leaders</h2>
+<div class="card-grid">
+  @for (leader of kantoLeaders(); track leader.name) {
+    <app-gym-card [leader]="leader" />
+  }
+</div>

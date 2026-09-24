@@ -1,0 +1,26 @@
+<div class="card" [style.border-color]="leader().color">
+  <h3 [style.color]="leader().color">{{ leader().name }}</h3>
+  <p><strong>Badge:</strong> {{ leader().badge }}</p>
+  <p><strong>Location:</strong> {{ leader().location }}</p>
+  <p class = eleType><strong>Type: </strong> <span [style.color]="leader().color">{{ leader().type }}</span></p>
+
+<button class="motoBut" (click)="showMono()">
+  Show Motto
+</button>
+
+@if (showMotto()) {
+  <p class = motoFo>Description: {{ leader().motto }} <span [style.color]="leader().color"></span> </p>
+  
+}
+
+
+  <h4>Pokemon Team</h4>
+  <ul>
+    @for (p of leader().team; track p.name) {
+      <li>{{ p.name }} (Lvl {{ p.level }})</li>
+    }
+
+    
+    
+  </ul>
+</div>
